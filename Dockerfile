@@ -61,14 +61,9 @@ RUN update-alternatives --install /usr/bin/java java $JAVA_HOME/bin/java 20000 &
 ADD http://mirrors.jenkins-ci.org/war/latest/jenkins.war /opt/jenkins.war
 RUN chmod 644 /opt/jenkins.war
 ENV JENKINS_HOME /jenkins
-RUN mkdir -p /jenkins/plugins
-RUN chmod 644 /jenkins/plugins
-ADD http://updates.jenkins-ci.org/latest/git.hpi /opt/jenkins/plugins
 
 # configure the container to run jenkins, mapping container port 8080 to that host port
 ENTRYPOINT java -jar /opt/jenkins.war
 EXPOSE 8080
 
 CMD [""]
-
-
