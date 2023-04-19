@@ -6,7 +6,7 @@
 # Nano 2.2.6-1ubuntu1
 
 # extend the most recent long term support Ubuntu version
-FROM ubuntu:latest
+FROM ubuntu:kinetic
 
 MAINTAINER Stephen L. Reed (http://texai.org, stephenreed@yahoo.com)
 
